@@ -11,10 +11,10 @@ class MahasiswaController extends Controller
      */
     public function index()
     {
-        $data = \App\Models\Mahasiswa::all();
+        $data['mahasiswa'] = \App\Models\Mahasiswa::all();
         $data['judul'] = 'Data-data Mahasiswa';
 
-        return view('mahasiswa_index');
+        return view('mahasiswa_index', $data);
     }
 
     /**
