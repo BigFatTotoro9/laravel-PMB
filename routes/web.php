@@ -24,9 +24,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource(name : 'jurusan', controller: JurusanController::class);
+Route::resource(name: 'jurusan', controller: JurusanController::class);
 Route::resource('mahasiswa', MahasiswaController::class);
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Jurusan;
 use Illuminate\Http\Request;
 
 class JurusanController extends Controller
@@ -13,7 +14,14 @@ class JurusanController extends Controller
     {
         $data['jurusan'] = \App\Models\Jurusan::all();
         $data['judul'] = 'Jurusan Kita';
-        return view('jurusan_index',$data);
+        $data['list_warna'] = [
+            'aqua' => 'aqua',
+            'green' => 'green',
+            'yellow' => 'yellow',
+            'red' => 'red',
+
+        ];
+        return view('jurusan_index', $data);
     }
 
     /**
@@ -26,8 +34,8 @@ class JurusanController extends Controller
         $data['method'] = 'POST';
         $data['tombol'] = 'SIMPAN';
         $data['judul'] = 'Tambah Jurusan';
-        
-        return view('jurusan_form', $data);
+
+        return view('jurusan_index', $data);
     }
 
     /**
@@ -35,7 +43,17 @@ class JurusanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validasiData = $request->validate([
+            'jenis_jurusan' => 'required',
+            'jumlah_pendaftar' => 'nullable',
+        ]);
+
+        $jurusan = new Jurusan();
+        $jurusan->fill($validasiData);
+        $jurusan->save();
+
+        flash('Data berhasil disimpan');
+        return back();
     }
 
     /**
