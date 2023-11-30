@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('jenkel');
             $table->date('tanggal_lahir');
             $table->string('asal_sma');
-            $table->date('tahun_lulus');
+            $table->year('tahun_lulus');
             $table->timestamps();
         });
     }
