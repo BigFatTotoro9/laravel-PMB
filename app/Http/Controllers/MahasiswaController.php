@@ -27,7 +27,7 @@ class MahasiswaController extends Controller
         $data['mahasiswa'] = new Mahasiswa();
         $data['method'] = 'POST';
         $data['route'] = 'mahasiswa.create';
-        $data['jenkel'] = [
+        $data['list_jenkel'] = [
             'Laki-laki' => 'laki-laki',
             'Perempuan' => 'perempuan',
         ];
@@ -72,7 +72,7 @@ class MahasiswaController extends Controller
         $data['mahasiswa'] = Mahasiswa::findOrFail($id);
         $data['route'] =  ['mahasiswa.update', $id];
         $data['method'] = 'PUT';
-        $data['jenkel'] = [
+        $data['list_jenkel'] = [
             'Laki-laki' => 'laki-laki',
             'Perempuan' => 'perempuan',
         ];
