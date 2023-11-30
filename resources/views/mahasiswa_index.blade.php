@@ -1,41 +1,39 @@
-@extends('layouts.app')
+@extends('layouts.adminlte')
 
 @section('content')
-    <div class="container">
-        <div class="row justify-content-center ">
-            <div class="col-md-8">
-
-                <div class="card">
-                    <div class="card-header">
-                        {{ $judul }}
+    <!-- Main content -->
+    <section class="content">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="col-md-12 ">
+                <!-- small box -->
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">{{ $judul }}</h3>
                     </div>
-                    <div class="card-body">
-                        <table class="table table-light table-striped table-bordered">
-                            <thead class="thead-light">
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>Nama</th>
+                                <th>Jenis Kelamin</th>
+                                <th>Tanggal Lahir</th>
+                                <th>Asal SMA</th>
+                                <th>Tahun Lulus</th>
+                            </tr>
+                            @foreach ($mahasiswa as $item)
                                 <tr>
-                                    <th>Nama</th>
-                                    <th>Jenis Kelamin</th>
-                                    <th>Tanggal Lahir</th>
-                                    <th>Asal SMA</th>
-                                    <th>Tahun Lulus</th>
+                                    <td>{{ $item->nama }}</td>
+                                    <td>{{ $item->jenkel }}</td>
+                                    <td>{{ $item->tanggal_lahir }}</td>
+                                    <td>{{ $item->asal_sma }}</td>
+                                    <td>{{ $item->tahun_lulus }}</td>
                                 </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($mahasiswa as $item)
-                                    <tr>
-                                        <td>{{ $item->nama }}</td>
-                                        <td>{{ $item->jenkel }}</td>
-                                        <td>{{ $item->tanggal_lahir }}</td>
-                                        <td>{{ $item->asal_sma }}</td>
-                                        <td>{{ $item->tahun_lulus }}</td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
+                            @endforeach
                         </table>
                     </div>
                 </div>
-
             </div>
         </div>
-    </div>
+    </section>
 @endsection

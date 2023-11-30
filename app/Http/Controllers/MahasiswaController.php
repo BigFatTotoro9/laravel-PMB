@@ -16,6 +16,7 @@ class MahasiswaController extends Controller
         $data['mahasiswa'] = Mahasiswa::all();
         $data['judul'] = 'Data-data Mahasiswa';
 
+
         return view('mahasiswa_index', $data);
     }
 

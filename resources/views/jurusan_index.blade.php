@@ -1,4 +1,5 @@
 @extends('layouts.adminlte')
+
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -27,7 +28,7 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            
+
                         </div>
                     </div>
                 </div>
