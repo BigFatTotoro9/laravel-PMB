@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+@extends('layouts.medilab')
+=======
 @extends('layouts.app')
+>>>>>>> 8b19830a147d8124a4acf031e24d0974c6a29613
 
 @section('content')
 <div class="container">

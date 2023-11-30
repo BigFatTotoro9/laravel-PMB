@@ -30,7 +30,18 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
+<<<<<<< HEAD
+                        @auth
+                            <li class="nav-item">
+                                <a href="/home" class="nav-link">Beranda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/jurusan" class="nav-link">Jurusan</a>
+                            </li>
+                        @endauth
+=======
 
+>>>>>>> 8b19830a147d8124a4acf031e24d0974c6a29613
                     </ul>
 
                     <!-- Right Side Of Navbar -->

@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('jurusans', function (Blueprint $table) {
             $table->id();
+            $table->string('jenis_jurusan');
+            $table->string('jumlah_pendaftar');
+            $table->string('jumlah_gamaudaftar');
             $table->timestamps();
         });
     }
