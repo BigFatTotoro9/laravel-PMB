@@ -147,6 +147,9 @@
 
                 <div class="row">
                     @yield('content')
+
+                    @include('flash::message')
+                    @yield('')
                 </div>
 
             </div>

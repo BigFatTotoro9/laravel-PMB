@@ -27,7 +27,7 @@ class MahasiswaController extends Controller
     {
         $data['mahasiswa'] = new Mahasiswa();
         $data['method'] = 'POST';
-        $data['route'] = 'mahasiswa.create';
+        $data['route'] = 'mahasiswa.store';
         $data['list_jenkel'] = [
             'Laki-laki' => 'laki-laki',
             'Perempuan' => 'perempuan',
