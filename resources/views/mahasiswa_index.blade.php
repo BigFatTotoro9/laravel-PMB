@@ -20,6 +20,7 @@
                                 <th>Tanggal Lahir</th>
                                 <th>Asal SMA</th>
                                 <th>Tahun Lulus</th>
+                                TESSSSSSSSSSSS
                             </tr>
                             @foreach ($mahasiswa as $item)
                                 <tr>
