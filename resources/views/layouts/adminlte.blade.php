@@ -352,7 +352,7 @@
                         </a>
                         <ul class="treeview-menu">
                             <li class="active"><a href="jurusan"><i class="fa fa-circle-o"></i> Jurusan</a></li>
-                            <li><a href="home"><i class="fa fa-circle-o"></i> Mahasiswa</a></li>
+                            <li><a href="mahasiswa"><i class="fa fa-circle-o"></i> Mahasiswa</a></li>
                         </ul>
                     </li>
 
