@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('jenis_jurusan');
             $table->string('jumlah_pendaftar')->default('0');
+            $table->string('deskripsi');
             $table->timestamps();
         });
     }
