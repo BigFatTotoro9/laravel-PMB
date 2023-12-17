@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Jurusan | Dashboard</title>
+    <title>{{ $title }}</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -351,8 +351,8 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li class="active"><a href="jurusan"><i class="fa fa-circle-o"></i> Jurusan</a></li>
-                            <li><a href="home"><i class="fa fa-circle-o"></i> Mahasiswa</a></li>
+                            <li><a href="jurusan"><i class="fa fa-circle-o"></i> Jurusan</a></li>
+                            <li><a href="mahasiswa"><i class="fa fa-circle-o"></i> Mahasiswa</a></li>
                         </ul>
                     </li>
 
@@ -390,6 +390,10 @@
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
+            <section class="py-4">
+                @include('flash::message')
+                @yield('')
+            </section>
             <section class="content-header">
                 <h1>
                     Dashboard
@@ -403,10 +407,6 @@
             <section class="content">
                 @yield('content')
             </section>
-            <main class="py-4">
-                @include('flash::message')
-                @yield('')
-            </main>
             <!-- /.content -->
 
         </div>

@@ -1,23 +1,22 @@
 @extends('layouts.app')
 @section('content')
-    
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                .<div class="card">
-                    <div class="card-header">
-                        {{ $judul }}
-                    </div>
-                    <div class="card-body">
-                        <form action="/jurusan" method="POST">
-                        @method('POST')
-                        @csrf
-                        </form>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    .<div class="card">
+                        <div class="card-header">
+                            {{ $judul }}
+                        </div>
+                        <div class="card-body">
+                            <form action="/jurusan" method="POST">
+                                @method('POST')
+                                @csrf
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 @endsection

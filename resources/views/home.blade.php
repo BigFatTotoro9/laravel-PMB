@@ -127,7 +127,7 @@
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
 
-            <a href="#appointment" class="appointment-btn scrollto">Gabung Sekarang</a>
+            <a href="{{ route('mahasiswa.create') }}" class="appointment-btn scrollto">Gabung Sekarang</a>
 
         </div>
     </header><!-- End Header -->

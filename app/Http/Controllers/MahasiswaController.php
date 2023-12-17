@@ -15,6 +15,8 @@ class MahasiswaController extends Controller
     {
         $data['mahasiswa'] = Mahasiswa::all();
         $data['judul'] = 'Data-data Mahasiswa';
+        $data['title'] = "Mahasiswa | Dashboard";
+
 
 
         return view('mahasiswa_index', $data);
@@ -28,6 +30,8 @@ class MahasiswaController extends Controller
         $data['mahasiswa'] = new Mahasiswa();
         $data['method'] = 'POST';
         $data['route'] = 'mahasiswa.store';
+        $data['title'] = "Mahasiswa | Admission";
+
         $data['list_jenkel'] = [
             'Laki-laki' => 'laki-laki',
             'Perempuan' => 'perempuan',

@@ -14,13 +14,14 @@ class JurusanController extends Controller
     {
         $data['jurusan'] = \App\Models\Jurusan::all();
         $data['judul'] = 'Jurusan Kita';
+        $data['title'] = "Jurusan | Dashboard";
         $data['list_warna'] = [
             'aqua' => 'aqua',
             'green' => 'green',
             'yellow' => 'yellow',
             'red' => 'red',
-
         ];
+
         return view('jurusan_index', $data);
     }
 
@@ -29,11 +30,13 @@ class JurusanController extends Controller
      */
     public function create()
     {
-        $data['dokter'] = new \App\Models\Jurusan();
+        $data['jurusan'] = new \App\Models\Jurusan();
         $data['route'] = 'jurusan.store';
         $data['method'] = 'POST';
         $data['tombol'] = 'SIMPAN';
         $data['judul'] = 'Tambah Jurusan';
+        $data['title'] = "Jurusan | Admission";
+
 
         return view('jurusan_index', $data);
     }
