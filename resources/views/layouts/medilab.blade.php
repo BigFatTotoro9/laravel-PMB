@@ -68,8 +68,6 @@
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="jurusan">Jurusan</a></li>
-                    <li><a class="nav-link scrollto" href="mahasiswa">Mahasiswa</a></li>
 
                     <li>@guest
                             @if (Route::has('login'))

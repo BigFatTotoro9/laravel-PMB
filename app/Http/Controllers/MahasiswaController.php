@@ -36,7 +36,7 @@ class MahasiswaController extends Controller
             'Laki-laki' => 'laki-laki',
             'Perempuan' => 'perempuan',
         ];
-        return view('mahasiswa_form', $data);
+        return view('user.datadiri_form', $data);
     }
 
     /**
@@ -58,7 +58,7 @@ class MahasiswaController extends Controller
         $data->save();
 
         flash('Data berhasil disimpan');
-        return redirect("/mahasiswa");
+        return redirect()->route('user.beranda');
     }
 
     /**
@@ -82,7 +82,7 @@ class MahasiswaController extends Controller
             'Perempuan' => 'perempuan',
         ];
 
-        return view('mahasiswa_form', $data);
+        return view('user.datadiri_form', $data);
     }
 
     /**
@@ -103,7 +103,7 @@ class MahasiswaController extends Controller
         $data->save();
 
         flash('Data berhasil diubah');
-        return redirect()->route('mahasiswa.index');
+        return redirect()->route('user.beranda');
     }
 
     /**

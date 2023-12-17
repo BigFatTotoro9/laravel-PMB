@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> ADMIN PAGE</title>
+    <title>ADMIN PAGE</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -272,19 +272,22 @@
                         <!-- User Account: style can be found in dropdown.less -->
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                                <img src="{{ asset('adminlte') }}/dist/img/user2-160x160.jpg" class="user-image"
+                                    alt="User Image">
                                 <span class="hidden-xs">Jomkomi</span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header">
-                                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                    <img src="{{ asset('adminlte') }}/dist/img/user2-160x160.jpg" class="img-circle"
+                                        alt="User Image">
 
                                     <p>
                                         Jomkomi - Admin
                                         <small>Admin since Nov. 2023</small>
                                     </p>
                                 </li>
+
                                 <!-- Menu Body -->
                                 <li class="user-body">
                                     <div class="row">
@@ -334,7 +337,8 @@
                 <!-- Sidebar user panel -->
                 <div class="user-panel">
                     <div class="pull-left image">
-                        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="{{ asset('adminlte') }}/dist/img/user2-160x160.jpg" class="img-circle"
+                            alt="User Image">
                     </div>
                     <div class="pull-left info">
                         <p>Jomkomi</p>
@@ -392,10 +396,6 @@
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
-            <section class="py-4">
-                @include('flash::message')
-                @yield('')
-            </section>
             <section class="content-header">
                 <h1>
                     Dashboard
@@ -407,7 +407,17 @@
                 </ol>
             </section>
             <section class="content">
-                @yield('content')
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="card-title">Hai admin</h1>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam enim illum
+                            rem perspiciatis repellat, voluptas ipsam nemo architecto, esse adipisci odit voluptatum
+                            maiores officia omnis veritatis cumque suscipit! Reprehenderit qui distinctio asperiores
+                            vero natus, nam deserunt tempora quas, tenetur ad quo et molestias numquam illo saepe quidem
+                            at, unde perferendis.</p>
+                    </div>
+                </div>
+
             </section>
             <!-- /.content -->
 
