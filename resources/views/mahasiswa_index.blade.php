@@ -6,6 +6,8 @@
         <!-- Small boxes (Stat box) -->
         <div class="row">
             <div class="col-md-12 ">
+                <a type="button" class="btn btn-block btn-primary btn-lg" href="{{ route('mahasiswa.create') }}">Tambah
+                    Data</a>
                 <!-- small box -->
                 <div class="box">
                     <div class="box-header with-border">

@@ -58,7 +58,7 @@ class MahasiswaController extends Controller
         $data->save();
 
         flash('Data berhasil disimpan');
-        return back();
+        return redirect("/mahasiswa");
     }
 
     /**

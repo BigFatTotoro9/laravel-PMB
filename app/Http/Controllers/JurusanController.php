@@ -64,7 +64,15 @@ class JurusanController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data['jurusan'] = \App\Models\Jurusan::findOrFail($id);
+        $data['judul'] = 'Jurusan Kita';
+        $data['list_warna'] = [
+            'aqua' => 'aqua',
+            'green' => 'green',
+            'yellow' => 'yellow',
+            'red' => 'red',
+        ];
+        return view('deskripsi', $data);
     }
 
     /**
